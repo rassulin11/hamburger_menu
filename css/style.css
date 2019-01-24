@@ -1,0 +1,124 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.section {
+    height: 100vh;
+    background-color: #7b1fa2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.menu-btn {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+}
+
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 2px;
+    background-color: #222222;
+    margin-top: -1px;
+    margin-left: -10px;
+}
+
+.menu-btn span::before,
+.menu-btn span::after {
+    content: '';
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    display: block;
+}
+
+.menu-btn span::before {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+
+.menu-btn span::after {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+}
+
+.menu-btn_active span::before {
+    -webkit-transform: rotate(-35deg);
+    transform: rotate(-35deg);
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    width: 10px;
+}
+
+.menu-btn_active span::after {
+    -webkit-transform: rotate(35deg);
+    transform: rotate(35deg);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    width: 10px;
+}
+
+/* .menu-btn_active span {
+    height: 0;
+} */
+
+.menu-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    overflow: hidden;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+
+.menu-block nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu-nav__link {
+    text-decoration: none;
+    color: #222;
+    margin-right: 20px;
+
+}
+
+.menu-nav {
+    background-color: #ffffff;
+    height: 50px;
+    margin-right: -25px;
+    padding-right: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    transition: 0.2s;
+    transform-origin: right center;
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.menu-nav_active {
+    transform: translateX(0%);
+    opacity: 1;
+}
